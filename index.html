@@ -534,8 +534,9 @@
 					
 
 				<div class="row animate-in" data-anim-type="bounce-in-up-big" data-anim-delay="150">			
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<form class="contact-form" id="ajax-contact-form" action="javascript:alert('success!');"><!-- Contact Form -->
+					<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<form class="contact-form" id="ajax-contact-form" action="javascript:alert('success!');">
+						Contact Form
 					
 						<div id="note"></div>
 					
@@ -546,8 +547,8 @@
 							<textarea placeholder="Message *" name="message" required=""  ></textarea>
 
 							<input name="send_mail" type="submit" value="Send">
-					</form><!-- end Contact Form -->
-					</div>
+					</form>end Contact Form
+					</div> -->
 			
 				
 				
@@ -555,7 +556,7 @@
 						<div class="cont-details"><!-- Contact Details -->
 							<div class="adress"><span>Current Location</span>Austin, Tx</div>
 							<div class="phone"><span>phone</span>+1 914-290-1583</div>
-							<div class="email"><span>email</span><a href="#">lostaunaum@gmail.com</a></div>
+							<div class="email"><span>email</span><a href="mailto:lostaunaum@gmail.com">lostaunaum@gmail.com</a></div>
 						</div>
 						
 						<div class="social-net"> <!-- Social Networks -->
@@ -603,9 +604,7 @@
  * Author: Heather Corey
  * jQuery Simple Parallax Plugin
  */
- "use strict";
     $.fn.parallax = function(options) {
-			"use strict";
         var windowHeight = $(window).height();
  
         // Establish default settings
@@ -615,13 +614,13 @@
  
         // Iterate over each object in collection
         return this.each( function() {
-				"use strict";
+
         	// Save a reference to the element
         	var $this = $(this);
  
         	// Set up Scroll Handler
         	$(document).scroll(function(){
-				"use strict";
+
     		        var scrollTop = $(window).scrollTop();
             	        var offset = $this.offset().top;
             	        var height = $this.outerHeight();
@@ -646,14 +645,12 @@ $('.pricing-section,.services-section, .home-section').parallax({
 });
 
 		
-		$(document).ready(function() {
-		"use strict";
+		$(document).ready(function() 
 		
 		// Scroll Text Fade
 		if($('#scrolltextfade').css('position')=='absolute'){$('#scrolltextfade').hide();}
 	else
-	{ $(window).scroll(function(){
-		"use strict";
+	{ $(window).scroll(function()
             var opacity=1.3-($(window).scrollTop()/330);
 			$('#scrolltextfade').fadeTo(5,opacity);});
 			}
