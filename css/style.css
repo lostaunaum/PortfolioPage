@@ -453,12 +453,12 @@ text-transform:uppercase;
 font-family: 'Montserrat', sans-serif;
 }
 .bottom-txt {
+color: #FEF0C9;
 line-height: 1;
 text-align: center;
 margin:auto;
 }
 .bottom-txt span {
-color: #FEF0C9;
 display: inline-block;
 position: relative; 
 font-size:14px;
