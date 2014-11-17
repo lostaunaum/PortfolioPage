@@ -444,6 +444,7 @@ margin: 0 auto 50px;
 text-align:center;
 }
 .top-txt {
+color: #FEF0C9;
 letter-spacing:12px;
 font-size:30px;
 margin:10px 0 7px;
@@ -457,6 +458,7 @@ text-align: center;
 margin:auto;
 }
 .bottom-txt span {
+color: #FEF0C9;
 display: inline-block;
 position: relative; 
 font-size:14px;
