@@ -444,7 +444,7 @@ margin: 0 auto 50px;
 text-align:center;
 }
 .top-txt {
-color: #FEF0C9;
+color: white;
 letter-spacing:12px;
 font-size:30px;
 margin:10px 0 7px;
@@ -458,7 +458,7 @@ text-align: center;
 margin:auto;
 }
 .bottom-txt span {
-color: #FEF0C9;
+color: white;
 display: inline-block;
 position: relative; 
 font-size:14px;
@@ -1165,7 +1165,7 @@ color: #3ab074;
 
 /* SECTIONS */
 .home-section {
-background:url('../img/desert_opt.jpg') no-repeat bottom center fixed;
+background:url('../img/macDesk_opt.jpg') no-repeat bottom center fixed;
 background-size:cover;
 display: table;
 height: 100%;
