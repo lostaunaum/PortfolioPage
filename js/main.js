@@ -96,12 +96,6 @@
     gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'));
 
 
-
-    // $('.cbp-item').on ('click', function(e) {
-    //     e.preventDefault();
-    //     window.open(me.attr('href'),'_blank')
-    // });
-
     // add listener for load more click
     $('.cbp-l-loadMore-button-link').on('click', function(e) {
 
