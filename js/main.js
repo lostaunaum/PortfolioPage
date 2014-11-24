@@ -47,20 +47,20 @@
             // to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
             var t = this;
 
-            $.ajax({
-                url: url,
-                type: 'GET',
-                dataType: 'html',
-                timeout: 5000
-            })
-            .done(function(result) {
+            // $.ajax({
+            //     url: url,
+            //     type: 'GET',
+            //     dataType: 'html',
+            //     timeout: 5000
+            // })
+            // .done(function(result) {
 
-                t.updateSinglePageInline(result);
+            //     t.updateSinglePageInline(result);
 
-            })
-            .fail(function() {
-                t.updateSinglePageInline("Error! Please refresh the page!");
-            });
+            // })
+            // .fail(function() {
+            //     t.updateSinglePageInline("Error! Please refresh the page!");
+            // });
 
         }
     });
