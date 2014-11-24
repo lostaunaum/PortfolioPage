@@ -97,66 +97,66 @@
 
 
 
-    $('.cbp-item').on ('click', function(e) {
-        e.preventDefault();
-        window.open(me.attr('href'),'_blank')
-    });
-
-    // add listener for load more click
-    // $('.cbp-l-loadMore-button-link').on('click', function(e) {
-
+    // $('.cbp-item').on ('click', function(e) {
     //     e.preventDefault();
+    //     window.open(me.attr('href'),'_blank')
+    // });
 
-    //     var clicks, me = $(this), oMsg;
+    add listener for load more click
+    $('.cbp-l-loadMore-button-link').on('click', function(e) {
 
-    //     if (me.hasClass('cbp-l-loadMore-button-stop')) return;
+        e.preventDefault();
 
-        // get the number of times the loadMore link has been clicked
-        // clicks = $.data(this, 'numberOfClicks');
-        // clicks = (clicks)? ++clicks : 1;
-        // $.data(this, 'numberOfClicks', clicks);
+        var clicks, me = $(this), oMsg;
 
-        // set loading status
-        // oMsg = me.text();
-        // me.text('LOADING...');
+        if (me.hasClass('cbp-l-loadMore-button-stop')) return;
 
-        // perform ajax request
-        // $.ajax({
-        //     url: me.attr('href'),
-        //     type: 'GET',
-        //     dataType: 'HTML'
-        // })
+        get the number of times the loadMore link has been clicked
+        clicks = $.data(this, 'numberOfClicks');
+        clicks = (clicks)? ++clicks : 1;
+        $.data(this, 'numberOfClicks', clicks);
 
-        // .done( function (result) {
-        //     var items, itemsNext;
+        set loading status
+        oMsg = me.text();
+        me.text('LOADING...');
 
-            // find current container
-            // items = $(result).filter( function () {
-            //     return $(this).is('div' + '.cbp-loadMore-block' + clicks);
-            // });
+        perform ajax request
+        $.ajax({
+            url: me.attr('href'),
+            type: 'GET',
+            dataType: 'HTML'
+        })
 
-            // gridContainer.cubeportfolio('appendItems', items.html(),
-            //      function () {
-                    // put the original message back
-                    // me.text(oMsg);
+        .done( function (result) {
+            var items, itemsNext;
 
-                    // check if we have more works
-        //             itemsNext = $(result).filter( function () {
-        //                 return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
-        //             });
+            find current container
+            items = $(result).filter( function () {
+                return $(this).is('div' + '.cbp-loadMore-block' + clicks);
+            });
 
-        //             if (itemsNext.length === 0) {
-        //                 me.text('NO MORE WORKS');
-        //                 me.addClass('cbp-l-loadMore-button-stop');
-        //             }
+            gridContainer.cubeportfolio('appendItems', items.html(),
+                 function () {
+                    put the original message back
+                    me.text(oMsg);
 
-        //          });
+                    check if we have more works
+                    itemsNext = $(result).filter( function () {
+                        return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
+                    });
 
-        // })
+                    if (itemsNext.length === 0) {
+                        me.text('NO MORE WORKS');
+                        me.addClass('cbp-l-loadMore-button-stop');
+                    }
 
-        // .fail(function() {
-            // error
-        // });
+                 });
+
+        })
+
+        .fail(function() {
+            error
+        });
 
     });
 
