@@ -102,7 +102,7 @@
     //     window.open(me.attr('href'),'_blank')
     // });
 
-    add listener for load more click
+    // add listener for load more click
     $('.cbp-l-loadMore-button-link').on('click', function(e) {
 
         e.preventDefault();
@@ -111,16 +111,16 @@
 
         if (me.hasClass('cbp-l-loadMore-button-stop')) return;
 
-        get the number of times the loadMore link has been clicked
+        // get the number of times the loadMore link has been clicked
         clicks = $.data(this, 'numberOfClicks');
         clicks = (clicks)? ++clicks : 1;
         $.data(this, 'numberOfClicks', clicks);
 
-        set loading status
+        // set loading status
         oMsg = me.text();
         me.text('LOADING...');
 
-        perform ajax request
+        // perform ajax request
         $.ajax({
             url: me.attr('href'),
             type: 'GET',
@@ -130,17 +130,17 @@
         .done( function (result) {
             var items, itemsNext;
 
-            find current container
+            // find current container
             items = $(result).filter( function () {
                 return $(this).is('div' + '.cbp-loadMore-block' + clicks);
             });
 
             gridContainer.cubeportfolio('appendItems', items.html(),
                  function () {
-                    put the original message back
+                    // put the original message back
                     me.text(oMsg);
 
-                    check if we have more works
+                    // check if we have more works
                     itemsNext = $(result).filter( function () {
                         return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
                     });
@@ -155,7 +155,7 @@
         })
 
         .fail(function() {
-            error
+            // error
         });
 
     });
