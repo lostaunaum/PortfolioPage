@@ -444,7 +444,8 @@ margin: 0 auto 50px;
 text-align:center;
 }
 .top-txt {
-color: black;
+color: #F0E68C;
+text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 letter-spacing:12px;
 font-size:30px;
 margin:10px 0 7px;
@@ -458,10 +459,11 @@ text-align: center;
 margin:auto;
 }
 .bottom-txt span {
-color: black;
+color: #F0E68C;
+text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 display: inline-block;
 position: relative; 
-font-size:14px;
+font-size:20px;
 font-family: 'Montserrat', sans-serif;
 letter-spacing:15px;
 text-transform:uppercase;
@@ -1165,7 +1167,7 @@ color: #3ab074;
 
 /* SECTIONS */
 .home-section {
-background:url('../img/3big.jpg') no-repeat bottom center fixed;
+background:url('../img/typewriter.jpg') no-repeat bottom center fixed;
 background-size:cover;
 display: table;
 height: 100%;
